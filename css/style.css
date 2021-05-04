@@ -1,0 +1,587 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: auto;
+    padding: 0 160px; /*separacion de los elementos con respecto al borde*/
+    margin: auto;
+}
+
+/*------------------NAVBAR/MENU------------------------*/
+.navbar{
+    position: fixed; /*el area de la caja del navabar se acopla al tamño que este ocupa*/
+    width: 100%; /*hago que el area del navbar ocupe toda la pantalla*/
+    padding: 30px 0; /*ancho del navabar*/
+    transition: all 0.3s ease;
+}
+.navbar.sticky{ /*Lo activa el script*/
+    background: rgb(173, 0, 58);
+    padding: 15px 0; /*ancho del navabar*/
+    z-index: 999;
+}
+.navbar .max-width{
+    display: flex; /*Todo lo que este dentro del div max-width se comporta como una entidad*/
+    align-items: center;
+    justify-content: space-between; /*Deja en cada punto los divs dentro del max-width*/
+}
+/*LOGO DEL NAVBAR*/
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo span{
+    color: crimson;
+}
+.navbar.sticky .logo span{
+    color: white;
+}
+/*MENU DE OPCIONES DEL NAVBAR*/
+.navbar .menu li{
+    list-style: none;
+    display: inline-block; /*cada opcion del menu una al lado de la otra*/
+}
+.navbar .menu li a{
+    color: #fff; /*color blanco a los enlaces de la lista del menu*/
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 30px; /*separacion entre cada elemento de la lista*/
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: rgb(173, 0, 58);
+    font-size: 24px;
+}
+.navbar.sticky .menu li a:hover{
+    color: white;
+    font-size: 24px;
+}
+/*MENU MOBILE (LOGUITO DE 3 BARRAS)*/
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none; /*Hago que no se muestre en pantalla, deja d eocupar espacio*/
+}
+/*----------------------SECCION HOME/INICIO -------------------------------------*/
+.home{
+    display: flex;
+    background: rgb(31, 25, 25);
+    height: 100vh; /*Cubre el tamaño total de la pantalla visible*/
+    color: #fff; /*todo el contenido texto de la seccion color blanco*/
+    min-height: 500px;
+}
+.home .max-width{
+    margin: auto;
+}
+.home .home-content .texto-1{
+    text-align: center;
+    font-size: 80px;
+}
+.home .home-content .texto-2{
+    font-size: 30px;
+    text-align: center;
+}
+.home .home-content span:hover{
+    color: rgb(173, 0, 58);
+}
+.home .home-content .texto-1 span:hover{
+    font-size: 85px;
+}
+.home .home-content .texto-2 span:hover{
+    font-size: 35px;
+}
+
+/*----------------------------SECCION PROYECTOS-----------------------------------*/
+main{
+    color: #fff;
+    padding: 100px 0;
+    background: rgb(31, 25, 25);
+}
+.services .title{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    color: white;
+}
+.services .title span:hover{
+    text-align: center;
+    font-size: 70px;
+    color:  rgb(173, 0, 58);
+}
+.services .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.services .serv-content .card{
+    width: calc(33% - 20px); /*cada card ocupa un 33% del ancho de la pantall, con una separacion de 20cm entre ellos*/
+    background: rgb(42, 47, 51);
+    text-align: center;
+    border-radius: 6px;
+    padding: 30px 45px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.3);
+    height: 594.8px;
+}
+.services .serv-content .card:hover{
+    background: rgb(173, 0, 58);
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card:hover .box a{
+    transform: scale(1.05);
+    background: rgb(42, 47, 51);
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.services .serv-content .card img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.services .serv-content .card p{
+    margin-top: 10px;
+}
+.services .serv-content .card a.effect{
+    display: inline-block;
+    background: rgb(173, 0, 58);
+    padding: 8px 30px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: white;
+    font-size: 17px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.3);
+}
+
+.services .serv-content .card a:hover{
+    color: white;
+    background: rgb(42, 47, 51);
+    font-size: 18px;
+}
+
+
+
+/*----------------------------SECCION SOBRE MI-------------------------------------*/
+section{
+    padding: 100px 0;
+    background: rgb(31, 25, 25);
+}
+.about title{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.about title:hover{
+    color:  rgb(173, 0, 58);
+    font-size: 70px;
+}
+.about .title{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    color: white;
+}
+.about .title span:hover{
+    color:  rgb(173, 0, 58);
+    transform: scale(1.05, 1.05);
+    font-size: 70px;
+}
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgb(173, 0, 58);
+    border-radius: 5px;
+    object-fit: cover; /*hace que la imagen seacople al tamaño seleccionado*/
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.3);
+}
+.about .about-content .left img:hover{
+    height: 600px;
+    width: 600px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .texto{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right p{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.about .about-content .right h3{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: rgb(173, 0, 58);
+    padding: 8px 30px;
+    margin-right: 30px;
+    font-weight: 600;
+    color: white;
+    font-size: 17px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.3);
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+    font-size: 18px;
+}
+
+/*-------------------------SECCION CONTACTO----------------------------------------*/
+.contacto{
+    background: rgb(31, 25, 25);
+    padding: 3em 12.5em;
+}
+
+.contacto h1{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.contacto h1:hover{
+    color:  rgb(173, 0, 58);
+    font-size: 70px;
+}
+.contacto h2{
+    padding: 20px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+/*CAJA DE CONTACT US*/
+.caja-contact{
+    color: white;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+}
+.formulario-contacto{
+    margin: 0;
+    padding: 40px ;
+}
+.formulario-contacto form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.formulario-contacto form label{
+    display: block;
+}
+.formulario-contacto form p{
+    margin: 0;
+    padding: 1em;
+}
+.formulario-contacto form .bloque{
+    grid-column: 1 / 3;
+}
+
+.formulario-contacto form button,
+.formulario-contacto form input,
+.formulario-contacto form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+.formulario-contacto form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    cursor: pointer;
+}
+.formulario-contacto form button:hover,
+.formulario-contacto form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+/*seccion de la info*/
+.info-contacto h4,
+.info-contacto ul{
+    color: white;
+    font-size: 15px;
+}
+.info-contacto{
+    text-align:center;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+}
+.info-contacto ul{
+    list-style-type: none;
+    padding: 2em;
+    margin:center;
+}
+.info-contacto ul li{
+    padding: .6em;
+    display: inline-block;
+}
+.info-contacto ul li a{
+    color: white;
+}
+
+/*-------------------------------------SECCION FOOTER------------------------------*/
+footer{
+    text-align: center;
+    background: rgb(31, 25, 25);
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span{
+    text-align: center;
+}
+footer span a{
+    color: rgb(173, 0, 58);
+}
+
+/*-------------------------SECCION RESPONSIVE--------------------------------------*/
+@media (max-width: 1760px){
+    .about .about-content .left img{
+        height: 400px;
+        width: 400px;
+    }
+    .about .about-content .left img:hover{
+        height: 400px;
+        width: 400px;
+    }
+}
+@media (max-width: 1400px){
+    .services .serv-content .card{
+        width: calc(48% - 10px);
+        margin-bottom: 20px;
+    }
+    .about .about-content .column{
+        width: 50%;
+    }
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+    .about .about-content .left img:hover{
+        height: 350px;
+        width: 350px;
+    }
+    .about .about-content .right .texto{
+        font-size: 20px;
+    }
+    .about .about-content .right p{
+        font-size: 16px;
+    }
+    .about .about-content .right h3{
+        font-size: 20px;
+    }
+    .about .about-content .right a{
+        display: block;
+        padding: auto;
+        text-align: center;
+        margin-bottom: 7px;
+        margin-right: 30px;
+    }
+}
+@media (max-width: 1200px){
+    
+    .contacto{
+        background: rgb(31, 25, 25);
+        padding: 3em 8.5em;
+    }
+}
+
+@media (max-width: 1050px){
+    .max-width{
+        padding: 0 80px; /*separacion de los elementos con respecto al borde*/
+    }
+    .menu-btn{ /*Mostrar las 3 barritas del menu*/
+        display: block; 
+        z-index: 999;
+    }
+    .menu-btn i.active:before{/*una vez que se muestra el menu, las 3 barritas se convierten en x*/
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed; /*lo pegue al borde izquierdo*/
+        height: 100vh;
+        width: 100%;
+        background: #111;
+        left: -100%; /*Oculto todo el menu fuera del borde izquierdo*/
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{ /*llamo a script que, al precionar las 3 barritas me muestre el menu*/
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block; /*Muestro las opciones del menú una abajo de la otra*/
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .texto-1{
+        font-size: 70px;
+    }
+    .home .home-content .texto-2{
+        font-size: 25px;
+    }
+    .home .home-content span:hover{
+        color: crimson;
+    }
+    .home .home-content .texto-1 span:hover{
+        font-size: 75px;
+    }
+    .home .home-content .texto-2 span:hover{
+        font-size: 27px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .services .title{
+        font-size: 50px;
+
+    }
+    .services .title span:hover{
+        font-size: 50px;
+    }
+    .about .title{
+        text-align: center;
+        font-size: 50px;
+    }
+    .about .title span:hover{
+        font-size: 50px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .rigth{
+        flex: 100%;
+    }
+    .about .about-content .right h3{
+        text-align: center;
+    }
+    .about .about-content .right a{
+        margin: auto;
+        margin-bottom: 7px;
+    }
+    .contacto{
+        background: rgb(31, 25, 25);
+        padding: 3em 4.5em;
+    }
+    .contacto h1{
+        font-size: 50px;
+    }
+    .contacto h1:hover{
+        font-size: 50px;
+    }
+    
+}
+@media (max-width:800px){
+    .services .serv-content .card{
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .contacto{
+        background: rgb(31, 25, 25);
+        padding: 3em 1.5em;
+    }
+    .formulario-contacto form{
+        display: block;
+    }
+}
+
+@media (max-width: 500px){
+    .max-width{
+        padding: 0 20px; /*separacion de los elementos con respecto al borde*/
+    }
+    .navbar .logo a{
+        font-size: 25px;
+    }
+    .home .home-content .texto-1{
+        font-size: 50px;
+    }
+    .home .home-content .texto-2{
+        font-size: 20px;
+    }
+    .home .home-content span:hover{
+        color: crimson;
+    }
+    .home .home-content .texto-1 span:hover{
+        font-size: 53px;
+    }
+    .home .home-content .texto-2 span:hover{
+        font-size: 22px;
+    }
+    .services .title{
+        font-size: 40px;
+    }
+    .services .title span:hover{
+        font-size: 40px;
+    }
+    .about .title{
+        font-size: 40px;
+    }
+    .about .title span:hover{
+        font-size: 40px;
+    }
+    .contacto h1{
+        font-size: 40px;
+    }
+    .contacto h1:hover{
+        font-size: 40px;
+    }
+}
+
