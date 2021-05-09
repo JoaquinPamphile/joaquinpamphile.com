@@ -530,10 +530,6 @@ footer span a{
     
 }
 @media (max-width:800px){
-    .services .serv-content .card{
-        width: auto;
-        margin-bottom: 20px;
-    }
     .contacto{
         background: rgb(31, 25, 25);
         padding: 3em 1.5em;
@@ -542,7 +538,12 @@ footer span a{
         display: block;
     }
 }
-
+@media (max-width:710px){
+    .services .serv-content .card{
+        width: auto;
+        margin-bottom: 20px;
+    }
+}
 @media (max-width: 500px){
     .max-width{
         padding: 0 20px; /*separacion de los elementos con respecto al borde*/
